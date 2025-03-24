@@ -1,0 +1,295 @@
+body {
+    margin: 0;
+    /* Remove default body margin */
+    padding-top: 200px;
+    /* Adjust as needed to accommodate fixed elements */
+    font-family: Arial, sans-serif;
+    /* Consistent font */
+    overflow-x: hidden;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    /* Or any color you prefer */
+    padding: 10px;
+    z-index: 100;
+    /* Ensure it's on top */
+    display: flex;
+    align-items: center;
+    /* Vertically center content */
+    justify-content: space-between;
+    /* Distribute logo, buttons, search */
+}
+
+
+
+.logo img {
+    width: 180px;
+    height: 110px;
+}
+
+.bottom-img {
+    position: absolute;
+    left: 27cm;
+    top: -25px;
+}
+
+.bottom-img img {
+    width: 300px;
+    height: 200px;
+}
+
+.image-row {
+    position: absolute;
+    left: 28cm;
+    top: 130px;
+    display: flex;
+    gap: 10px;
+}
+
+.image-row img {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}
+
+.camera-row {
+    display: flex;
+    justify-content:left; 
+    align-items: center; 
+    gap:40px; 
+    position: relative; 
+    right: 550px;
+    padding-left: 5px;}
+
+.camera-row img {
+    width: 50px;
+    height: 50px;
+}
+
+.left-buttons {
+    display: flex;
+
+    margin: 5px;
+    /* Arrange buttons horizontally */
+}
+
+.left-buttons button {
+    color: rgb(20, 19, 19);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 0 5px;
+    /* Spacing between buttons */
+    padding: 8px 16px;
+    /* Adjust padding as needed */
+    background-color: transparent;
+    /* Or a subtle background */
+}
+
+.search-container {
+    display: flex;
+    position: relative;
+    top: 2px;
+    right: 150px;
+    background: transparent;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#search-bar {
+    border: none;
+    outline: none;
+    padding: 8px;
+    width: 200px;
+    font-size: 16px;
+    color: gray;
+    background: none;
+}
+
+.search-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0;
+    /* Remove default button padding */
+    margin-left: 5px;
+    /* Add some space between input and button */
+}
+
+.post {
+    position: relative;
+    left: 580px;
+    top: 0px;
+    /* Adjust width */
+
+
+}
+
+.line {
+
+    position: relative;
+    right: 560px;
+    width: 35cm;
+    top: 0px;
+    border: 1px solid #979191;
+    margin: 20px 0;
+
+}
+
+.reactangle1 {
+    position: relative;
+    top: 0px;
+    right: 40%;
+    width: 30cm;
+    height: 2cm;
+    background-color: rgb(236, 234, 234);
+
+}
+
+.reactangle2 {
+    position: relative;
+    top: 0px;
+    right: 40%;
+    width: 30cm;
+    height: 4cm;
+    background-color: rgb(236, 234, 234);
+
+}
+
+.reactangle3 {
+    position: relative;
+    top: 0px;
+    right: 40%;
+    width: 6cm;
+    height: 1cm;
+    background-color: rgb(236, 234, 234);
+
+}
+
+.square1 {
+    position: relative;
+    width: 40cm;
+    right: 50%;
+    height: 5cm;
+    background-color: #868683;
+
+}
+
+.buy {
+    position: relative;
+    right: 41%;
+    width: 130px;
+    height: 40px;
+    padding: 10px 15px;
+    font-size: 18px;
+    margin-left: 20px;
+    margin-top: 12px;
+    border-radius: 5px;
+    border-color: rgb(152, 235, 235);
+    background-color: rgb(152, 235, 235);
+    color: rgb(0, 0, 0);
+}
+
+.buy:hover {
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.8);
+    /* Green Glow Effect */
+    transform: scale(1.05);
+    /* Slightly Enlarges */
+}
+
+.buy:hover {
+    background-color: rgb(102, 205, 205);
+    /* Darker Blue on Hover */
+}
+
+.contact-button {
+    position: relative;
+    top: 40px;
+    right: 190px;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.pri-button {
+    position: relative;
+    top: 60px;
+    right: 440px;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.term-button {
+    position: relative;
+    top: 80px;
+    right: 285px;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.FAQ-button {
+    position: relative;
+    top: 20px;
+    left: 367px;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.about-button {
+    position: relative;
+    top: 40px;
+    left: 310px;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.customer-button {
+    position: relative;
+    top: 60px;
+    left: 230px;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.tree-button {
+    position: relative;
+    top: 15px;
+    left: 386px;
+    font-size: 16px;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.call-button {
+    position: relative;
+    top: 40px;
+    left: 200px;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+}
