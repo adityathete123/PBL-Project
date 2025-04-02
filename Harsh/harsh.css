@@ -1,0 +1,315 @@
+body {
+    margin: 0;
+    /* Remove default body margin */
+    padding-top: 200px;
+    /* Adjust as needed to accommodate fixed elements */
+    font-family: Arial, sans-serif;
+    /* Consistent font */
+    overflow-x: hidden;
+   
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    /* Or any color you prefer */
+    padding: 10px;
+    z-index: 100;
+    /* Ensure it's on top */
+    display: flex;
+    align-items: center;
+    /* Vertically center content */
+    justify-content: space-between;
+    /* Distribute logo, buttons, search */
+}
+
+
+.logo img {
+    width: 180px;
+    height: 110px;
+}
+ .info-item img{
+    
+    width:50px;
+    height: 50px;
+ }
+ .left-buttons {
+    display: flex;
+    /* Arrange buttons horizontally */
+}
+
+.left-buttons button {
+    color: rgb(20, 19, 19);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 0 5px;
+    /* Spacing between buttons */
+    padding: 8px 16px;
+    /* Adjust padding as needed */
+    background-color: transparent;
+    /* Or a subtle background */
+}
+
+.search-container {
+    display: flex;
+    position: relative;
+    top: 2px;
+    right: 150px;
+    background: transparent;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#search-bar {
+    border: none;
+    outline: none;
+    padding: 8px;
+    width: 200px;
+    font-size: 16px;
+    color: gray;
+    background: none;
+}
+
+.search-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0;
+    /* Remove default button padding */
+    margin-left: 5px;
+    /* Add some space between input and button */
+}
+
+.content {
+    /* Style for the main content area */
+    padding: 20px;
+}
+.square1{
+    height:60px;
+    width:200px;
+    top:260px;
+    right:515px;
+    background-color:rgb(255,196,3);
+    border-radius:7px;
+    position:absolute;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow ', sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.square2{
+    height: 170px;
+    width: 700px;
+    top: 330px;
+    right:13px;
+    
+    background-color:rgb(220,220,224);
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position:absolute;
+    
+    
+    
+
+    
+
+}
+.square3{
+    height:210px;
+    width: 700px;
+    top: 520px;
+    right:13px;
+    background-color:rgb(220,220,224);
+    border-radius:7px;
+    position:absolute;
+    font-size:18px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.font3{
+    font-size: 17px;
+    color:black;
+    top:500px;
+    right:30px;
+    align-items:center;
+    position:absolute;
+
+}
+.font2{
+    font-size: 17px;
+    color:black;
+    position :absolute;
+    top:11px;
+    right:620px;
+    
+}
+.buybutton{
+    display:block;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(197, 189, 189);
+    color:black;
+    text-decoration: none;
+    width:100px;
+    border-radius:30px;
+    position:relative;
+    top: 200px;
+    left:270px;
+    font-size:x-large;
+    cursor: pointer;
+
+}
+.chatbutton{
+    background-color:rgb(197, 189, 189);
+    display:block;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    color:green;
+    text-decoration: none;
+    width:250px;
+    border-radius:5px;
+    position:relative;
+    top: 220px;
+    left:200px;
+    font-size: x-large;
+}
+.info-item{
+    display: flex;
+    align-items: center;
+    gap:-2px;
+    
+    top:50px;
+    left:-130px;
+    position: relative;
+}
+.square12 {
+    position: relative;
+    width: 40cm;
+    right: 7%;
+    height: 5cm;
+    top:7cm;
+    background-color: #868683;
+
+}
+
+.image-row {
+    position: absolute;
+    left: 28cm;
+    top: 130px;
+    display: flex;
+    gap: 10px;
+}
+
+.image-row img {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}
+.contact-button {
+    position: relative;
+    top: 40px;
+    right: 190px;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.pri-button {
+    position: relative;
+    top: 60px;
+    right: 440px;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.term-button {
+    position: relative;
+    top: 80px;
+    right: 285px;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.FAQ-button {
+    position: relative;
+    top: 20px;
+    left: 367px;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.about-button {
+    position: relative;
+    top: 40px;
+    left: 310px;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.customer-button {
+    position: relative;
+    top: 60px;
+    left: 230px;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.tree-button {
+    position: relative;
+    top: 15px;
+    left: 386px;
+    font-size: 16px;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.call-button {
+    position: relative;
+    top: 40px;
+    left: 200px;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+}
+.bottom-img {
+    position: absolute;
+    left: 27cm;
+    top: -25px;
+}
+
+.bottom-img img {
+    width: 300px;
+    height: 200px;
+}
