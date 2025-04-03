@@ -1,0 +1,249 @@
+body {
+    margin: 0;
+    /* Remove default body margin */
+    padding-top: 200px;
+    /* Adjust as needed to accommodate fixed elements */
+    font-family: Arial, sans-serif;
+    /* Consistent font */
+    overflow-x: hidden;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    /* Or any color you prefer */
+    padding: 10px;
+    z-index: 100;
+    /* Ensure it's on top */
+    display: flex;
+    align-items: center;
+    /* Vertically center content */
+    justify-content: space-between;
+    /* Distribute logo, buttons, search */
+}
+
+
+
+.logo img {
+    width: 180px;
+    height: 110px;
+}
+
+.bottom-img {
+    position: absolute;
+    left: 28cm;
+    top: -25px;
+}
+
+.bottom-img img {
+    width: 300px;
+    height: 200px;
+}
+.info-item img{
+    
+    width:50px;
+    height: 50px;
+ }
+ .left-buttons {
+    display: flex;
+    /* Arrange buttons horizontally */
+}
+
+.left-buttons button {
+    color: rgb(20, 19, 19);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 0 5px;
+    /* Spacing between buttons */
+    padding: 8px 16px;
+    /* Adjust padding as needed */
+    background-color: transparent;
+    /* Or a subtle background */
+}
+
+.search-container {
+    display: flex;
+    position: relative;
+    top: 2px;
+    right: 150px;
+    background: transparent;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#search-bar {
+    border: none;
+    outline: none;
+    padding: 8px;
+    width: 200px;
+    font-size: 16px;
+    color: gray;
+    background: none;
+}
+
+.search-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0;
+    /* Remove default button padding */
+    margin-left: 5px;
+    /* Add some space between input and button */
+}
+
+.content {
+    /* Style for the main content area */
+    padding: 20px;
+}
+.image-row {
+    position: absolute;
+    left: 28cm;
+    top: 130px;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.image-row img {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}
+.contact-button {
+    position: relative;
+    top: 40px;
+    right: 190px;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.pri-button {
+    position: relative;
+    top: 60px;
+    right: 440px;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.term-button {
+    position: relative;
+    top: 80px;
+    right: 285px;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.FAQ-button {
+    position: relative;
+    top: 20px;
+    left: 367px;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.about-button {
+    position: relative;
+    top: 40px;
+    left: 310px;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.customer-button {
+    position: relative;
+    top: 60px;
+    left: 230px;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.tree-button {
+    position: relative;
+    top: 15px;
+    left: 386px;
+    font-size: 16px;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.call-button {
+    position: relative;
+    top: 40px;
+    left: 200px;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.image-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: auto;
+    
+}
+.text {
+    position: absolute;
+    top: 30px;
+    left: 100px;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    color: #fffefe;
+}
+.text1 {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-30%);
+    color: white;
+    max-width: 600px;
+}
+.text1 h1 {
+    font-size: 60px;
+    font-weight: bold;
+    color: #ccc;
+}
+
+
+.text1 p {
+    margin-top: 15px;
+    font-size: 28px;
+    line-height: 1.5;
+    position: relative;
+    left: 550px;;
+}
+.square12 {
+    position: relative;
+    width: 40cm;
+    right: 7%;
+    height: 5cm;
+    top:5px;
+    background-color: #868683;
+
+}
