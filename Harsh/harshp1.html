@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bricks </title>
+    <link rel="stylesheet" href="harsh.css">
+</head>
+
+<body>
+
+    <div class="fixed-header">
+        <div class="logo">
+            <img src="images/download.png" alt="Logo">
+        </div>
+
+        <div class="left-buttons">
+            <button>My Profile</button>
+            <button>Sell</button>
+            <button>Materials</button>
+            <button>About</button>
+            <button>Home</button>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-bar" value="Search here..." onclick="clearText()" onblur="resetText()">
+            <button onclick="search()">🔍</button>
+        </div>
+    </div>
+
+
+
+    <body>
+        <img src="images/bricks1.jpg" alt="bricks" style="height: 300px;width:400px;top:200px;position: relative;"><br>
+        <h1 style="top: 200px;left: 250px;position: relative;">Rs.5/Bricks </h1>
+        <button class="buybutton">Buy</button>
+        <button class="chatbutton"><u>Chat With Seller</u></button>
+
+        <div class="square1">
+            <h1>FEATURED</h1>
+        </div><br>
+        <div class="square2">
+            <div class="font2">Unused<br><b>Bricks</b><br><br>Overview<br></p>
+                <hr style="border:2px medium black;">
+            </div><br>
+            <div class="info-item"><img src="images/user.png">User</div>
+            <div class="info-item"><img src="images/location1.png">Location</div>
+            <div class="info-item"><img src="images/calender1.png">Calender</div>
+        </div><br>
+        <div class="square3"></div>
+        <div class="font3">
+            <h2>Description</h2>
+            <hr style="border:2px extra black;width: 660px;">Condition:Unused and surplus from recent construction
+            projects.<br>
+            Color:Uniform and consistent,suitable for aesthetic and structural use.<br>Quality:Durable and strong,ideal
+            for all types of construction works.<br>
+            Availability:Bulk quantity available,prefect for large -scale or small-scale projects.<br>
+            Additional Info:Eco-friendly and cost-effective choice,reducing waste from <br>construction projects.
+        </div>
+
+        <div class="square12">
+            <p
+                style="margin-left: 250px; font-weight: bold;margin-top: 30px;margin-left: 230px;font-size:25px;color: aliceblue;position: relative;top: 25px;right:3cm">
+                INFORMATION
+                <button class="contact-button">>Contact Us</button>
+                <button class="term-button">>Terms And Conditions</button>
+                <button class="pri-button">>Privacy Policy</button>
+            </p>
+            <p
+                style="margin-left: 250px; font-weight: bold;margin-top: 30px;margin-left: 300px;font-size:25px;color: aliceblue;position: absolute;top:-4px;left:2cm;">
+                OUR COMPANY</p>
+            <button class="FAQ-button">>FAQs</button>
+            <button class="about-button">>About Us</button>
+            <button class="customer-button">>Customer Care</button>
+            <p
+                style="margin-left: 250px; font-weight: bold;margin-top: 30px;margin-left: 560px;font-size:25px;color: aliceblue;position: absolute;top:-4px;left:2cm;">
+                CONTACT INFO
+            </p>
+            <button class="tree-button">>treehouse@gmail.com</button>
+            <button class="call-button">>+91 99999 1111</button>
+            <div class="bottom-img">
+                <img src="images/download.png" alt="bottom">
+            </div>
+            <div class="image-row">
+                <img src="images/x-logo-removebg-preview.png" alt="image1">
+                <img src="images/f-logo-removebg-preview.png" alt="image2">
+                <img src="images/y-logo-removebg-preview.png" alt="image3">
+                <img src="images/link-logo-removebg-preview.png" alt="image4">
+            </div>
+        </div>
+        <script>
+            let defaultText = "Search here...";
+    
+            function clearText() {
+                let searchBar = document.getElementById("search-bar");
+                if (searchBar.value === defaultText) {
+                    searchBar.value = "";
+                    searchBar.style.color = "black";
+                }
+            }
+    
+            function resetText() {
+                let searchBar = document.getElementById("search-bar");
+                if (searchBar.value === "") {
+                    searchBar.value = defaultText;
+                    searchBar.style.color = "gray";
+                }
+            }
+        </script>
+    </body>
+
+</html>

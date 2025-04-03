@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cement </title>
+    <link rel="stylesheet" href="harsh.css">
+</head>
+
+<body>
+
+    <div class="fixed-header">
+        <div class="logo">
+            <img src="images/download.png" alt="Logo">
+        </div>
+
+        <div class="left-buttons">
+            <button>My Profile</button>
+            <button>Sell</button>
+            <button>Materials</button>
+            <button>About</button>
+            <button>Home</button>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-bar" value="Search here..." onclick="clearText()" onblur="resetText()">
+            <button onclick="search()">🔍</button>
+        </div>
+    </div>
+
+
+    <img src="images/cement.png" alt="tiles" class="cement-img">
+
+    <body>
+        
+        <h1 style="top:50px;left: 250px;position: relative;">300/Bag </h1>
+        <button class="buybutton" style="top: 60px;">Buy</button>
+        <button class="chatbutton" style="top: 70px;">Chat With Seller</button>
+
+        <div class="square1">
+            <h1>FEATURED</h1>
+        </div><br>
+        <div class="square2">
+            <div class="font2">Unused<br><b>Cement</b><br><br>Overview<br></p>
+                <hr style="border:2px medium black;">
+            </div><br>
+            <div class="info-item"><img src="images/user.png">User</div>
+            <div class="info-item"><img src="images/location1.png">Location</div>
+            <div class="info-item"><img src="images/calender1.png">Calender</div>
+        </div><br>
+        <div class="square3"></div>
+        <div class="font3">
+            <h2>Description</h2>
+            <hr style="border:2px dark black;">
+            Condition: Unused and surplus from recent construction projects.<br>
+            Quality: High-grade, durable, and strong, meeting industry standards for all types <br>of construction work.
+            <br>
+            Grade/Type:Specify the grade,(PPC) Uniform and consistent performance reliable structur<br>
+            integrity.<br>
+            
+            Availability: Bulk quantity available.
+        </div>
+ <div class="square12">
+                <p
+                    style="margin-left: 250px; font-weight: bold;margin-top: 30px;margin-left: 230px;font-size:25px;color: aliceblue;position: relative;top: 25px;right:3cm">
+                    INFORMATION
+                    <button class="contact-button">>Contact Us</button>
+                    <button class="term-button">>Terms And Conditions</button>
+                    <button class="pri-button">>Privacy Policy</button>
+                </p>
+                <p
+                    style="margin-left: 250px; font-weight: bold;margin-top: 30px;margin-left: 300px;font-size:25px;color: aliceblue;position: absolute;top:-4px;left:2cm;">
+                    OUR COMPANY</p>
+                <button class="FAQ-button">>FAQs</button>
+                <button class="about-button">>About Us</button>
+                <button class="customer-button">>Customer Care</button>
+                <p
+                    style="margin-left: 250px; font-weight: bold;margin-top: 30px;margin-left: 560px;font-size:25px;color: aliceblue;position: absolute;top:-4px;left:2cm;">
+                    CONTACT INFO
+                </p>
+                <button class="tree-button">>treehouse@gmail.com</button>
+                <button class="call-button">>+91 99999 1111</button>
+                <div class="bottom-img">
+                    <img src="images/download.png" alt="bottom">
+                </div>
+                <div class="image-row">
+                    <img src="images/x-logo-removebg-preview.png" alt="image1">
+                    <img src="images/f-logo-removebg-preview.png" alt="image2">
+                    <img src="images/y-logo-removebg-preview.png" alt="image3">
+                    <img src="images/link-logo-removebg-preview.png" alt="image4">
+                </div>
+ </div>
+            <script>
+                let defaultText = "Search here...";
+
+                function clearText() {
+                    let searchBar = document.getElementById("search-bar");
+                    if (searchBar.value === defaultText) {
+                        searchBar.value = "";
+                        searchBar.style.color = "black";
+                    }
+                }
+
+                function resetText() {
+                    let searchBar = document.getElementById("search-bar");
+                    if (searchBar.value === "") {
+                        searchBar.value = defaultText;
+                        searchBar.style.color = "gray";
+                    }
+                }
+            </script>
+
+    </body>
+
+</html>
