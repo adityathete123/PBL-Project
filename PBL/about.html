@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Material Management</title>
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="profile.css">
 </head>
+
 <body>
     <div class="fixed-header">
         <div class="logo">
@@ -14,33 +16,65 @@
 
         <div class="left-buttons">
             <a href="home.html" class="btn"><button>Home</button></a>
-        <a href="seller.html" class="btn"><button>Sell</button></a>
-        <a href="material.html" class="btn"><button>Materials</button></a>
-        <a href="about.html" class="btn"><button>About</button></a>
-        <a href="profil.html" class="btn"><button>My Profile</button></a>
+            <a href="seller.html" class="btn"><button>Sell</button></a>
+            <a href="material.html" class="btn"><button>Materials</button></a>
+            <a href="about.html" class="btn"><button>About</button></a>
+            <a href="profil.html" class="btn"><button>My Profile</button></a>
         </div>
         <div class="search-container">
-            <input type="text" id="search-bar" value="Search here..." onclick="clearText()" onblur="resetText()">
+            <input type="text" id="search-bar" placeholder="Search here..." onfocus="clearInput(this)" onblur="resetInput(this, 'Search here...')">
             <button onclick="search()">🔍</button>
         </div>
     </div>
-    <div class="container">
-        <h1>OUR STORY</h1>
-        <p>Discover our beginnings and the passion that brought us this far.</p>
-        <p>From modest beginnings, we've grown through innovation and a commitment to quality, continually advancing the building industry. Our journey has been marked by a relentless pursuit of innovation and an unwavering commitment to delivering the highest quality in every product and service we offer. Each milestone we've achieved reflects our dedication to shaping the future of construction. As we continue to grow, we invite you to explore the achievements that define who we are today and the legacy we're building for tomorrow.</p>
-        
-        <h2>VISION & MISSION</h2>
-        <div class="vision-mission">
-            <div class="vision">
-                <h3>Our Vision</h3>
-                <p>To lead the industry in retailing and value-added services for building materials and infrastructure products in the organized sector. We aim to be a transformative force that enhances shareholder value, attracts investments, and draws superior talent.</p>
-            </div>
-            <div class="mission">
-                <h3>Our Mission</h3>
-                <p>To consistently innovate our operations, expand our footprint, and empower our people to deliver quality products and services, creating exceptional customer experiences and lasting satisfaction.</p>
-            </div>
-        </div>
+
+    <script>
+        function clearInput(input) {
+            input.dataset.default = input.placeholder;
+            input.placeholder = "";
+        }
+
+        function resetInput(input, defaultText) {
+            if (input.value.trim() === "") {
+                input.placeholder = defaultText;
+            }
+        }
+
+        function postItem() {
+            const name = document.getElementById("name").value;
+            const about = document.getElementById("about").value;
+            const phone = document.getElementById("phone").value;
+            const email = document.getElementById("email").value;
+
+            alert(`Name: ${name}\nAbout: ${about}\nPhone: ${phone}\nEmail: ${email}`);
+        }
+    </script>
+
+    <div class="post">
+        <h1>Edit Profile</h1>
+        <div class="line"></div>
+        <h1 style="position: relative; right: 40%;">BASIC INFO</h1>
+
+        <input type="text" id="name" class="reactangle1" placeholder="NAME"
+            onfocus="clearInput(this)" onblur="resetInput(this, 'NAME')"
+            style="width: 1000px; text-align: left; vertical-align: top;"><br><br>
+
+        <input type="text" id="about" class="reactangle2" placeholder="About Me (Optional)*"
+            onfocus="clearInput(this)" onblur="resetInput(this, 'About Me (Optional)*')"
+            style="width: 1000px;"><br><br>
+
+        <h1 style="position: relative; right: 40%;">CONTACT INFO</h1>
+
+        <input type="text" id="phone" class="reactangle3" placeholder="+91"
+            onfocus="clearInput(this)" onblur="resetInput(this, '+91')"
+            style="width: 300px;"><br><br>
+
+        <input type="text" id="email" class="reactangle3" placeholder="E-MAIL"
+            onfocus="clearInput(this)" onblur="resetInput(this, 'E-MAIL')"
+            style="width: 300px;"><br><br>
+
+        <div><button class="buy" onclick="postItem()">SAVE</button></div>
     </div>
+
     <div class="square12">
         <p
             style="margin-left: 250px; font-weight: bold;margin-top: 30px;margin-left: 230px;font-size:25px;color: aliceblue;position: relative;top: 25px;right:3cm">
@@ -70,25 +104,7 @@
             <a href="https://youtube.com/?lang=en" class="btn"><img src="img/youtube.png" alt="image3"></a>
             <a href="https://linkedin.com/?lang=en" class="btn"><img src="img/linkedin.png" alt="image4"></a>
         </div>
-    </div>
-    <script>
-        let defaultText = "Search here...";
-
-        function clearText() {
-            let searchBar = document.getElementById("search-bar");
-            if (searchBar.value === defaultText) {
-                searchBar.value = "";
-                searchBar.style.color = "black";
-            }
-        }
-
-        function resetText() {
-            let searchBar = document.getElementById("search-bar");
-            if (searchBar.value === "") {
-                searchBar.value = defaultText;
-                searchBar.style.color = "gray";
-            }
-        }
-    </script>
+    </div>   
 </body>
+
 </html>
