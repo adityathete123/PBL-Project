@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Management</title>
+    <link rel="stylesheet" href="my-profile.css">
+</head>
+
+<body>
+    <div class="fixed-header">
+        <div class="logo">
+            <img src="images/download.png" alt="Logo">
+        </div>
+
+        <div class="left-buttons">
+            <button>My Profile</button>
+            <button>Sell</button>
+            <button>Materials</button>
+            <button>About</button>
+            <button>Home</button>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search here..." onfocus="clearInput(this)" onblur="resetInput(this, 'Search here...')">
+            <button onclick="search()">🔍</button>
+        </div>
+    </div>
+
+    <script>
+        function clearInput(input) {
+            input.dataset.default = input.placeholder;
+            input.placeholder = "";
+        }
+
+        function resetInput(input, defaultText) {
+            if (input.value.trim() === "") {
+                input.placeholder = defaultText;
+            }
+        }
+
+        function postItem() {
+            const name = document.getElementById("name").value;
+            const about = document.getElementById("about").value;
+            const phone = document.getElementById("phone").value;
+            const email = document.getElementById("email").value;
+
+            alert(`Name: ${name}\nAbout: ${about}\nPhone: ${phone}\nEmail: ${email}`);
+        }
+    </script>
+
+    <div class="post">
+        <h1>Edit Profile</h1>
+        <div class="line"></div>
+        <h1 style="position: relative; right: 40%;">BASIC INFO</h1>
+
+        <input type="text" id="name" class="reactangle1" placeholder="NAME"
+            onfocus="clearInput(this)" onblur="resetInput(this, 'NAME')"
+            style="width: 1000px; text-align: left; vertical-align: top;"><br><br>
+
+        <input type="text" id="about" class="reactangle2" placeholder="About Me (Optional)*"
+            onfocus="clearInput(this)" onblur="resetInput(this, 'About Me (Optional)*')"
+            style="width: 1000px;"><br><br>
+
+        <h1 style="position: relative; right: 40%;">CONTACT INFO</h1>
+
+        <input type="text" id="phone" class="reactangle3" placeholder="+91"
+            onfocus="clearInput(this)" onblur="resetInput(this, '+91')"
+            style="width: 300px;"><br><br>
+
+        <input type="text" id="email" class="reactangle3" placeholder="E-MAIL"
+            onfocus="clearInput(this)" onblur="resetInput(this, 'E-MAIL')"
+            style="width: 300px;"><br><br>
+
+        <div><button class="buy" onclick="postItem()">SAVE</button></div>
+    </div>
+
+    <div class="square12">
+        <p
+            style="margin-left: 250px; font-weight: bold;margin-top: 30px;margin-left: 230px;font-size:25px;color: aliceblue;position: relative;top: 25px;right:3cm">
+            INFORMATION
+            <button class="contact-button">>Contact Us</button>
+            <button class="term-button">>Terms And Conditions</button>
+            <button class="pri-button">>Privacy Policy</button>
+        </p>
+        <p
+            style="margin-left: 250px; font-weight: bold;margin-top: 30px;margin-left: 300px;font-size:25px;color: aliceblue;position: absolute;top:-4px;left:2cm;">
+            OUR COMPANY</p>
+        <button class="FAQ-button">>FAQs</button>
+        <button class="about-button">>About Us</button>
+        <button class="customer-button">>Customer Care</button>
+        <p
+            style="margin-left: 250px; font-weight: bold;margin-top: 30px;margin-left: 560px;font-size:25px;color: aliceblue;position: absolute;top:-4px;left:2cm;">
+            CONTACT INFO
+        </p>
+        <button class="tree-button">>treehouse@gmail.com</button>
+        <button class="call-button">>+91 99999 1111</button>
+        <div class="bottom-img">
+            <img src="images/download.png" alt="bottom">
+        </div>
+        <div class="image-row">
+            <img src="images/x-logo-removebg-preview.png" alt="image1">
+            <img src="images/f-logo-removebg-preview.png" alt="image2">
+            <img src="images/y-logo-removebg-preview.png" alt="image3">
+            <img src="images/link-logo-removebg-preview.png" alt="image4">
+        </div>
+    </div>   
+</body>
+
+</html>
