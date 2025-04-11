@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tree House Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      width: 75%;
+      max-width: 900px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .left-section {
+      flex: 1;
+      background: #d9d9d9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .left-section img {
+      width: 100%;
+      max-width: 350px;
+    }
+
+    .right-section {
+      flex: 1;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .login-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .user-icon {
+      width: 80px;
+      height: 80px;
+      background: #e0e0e0;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 15px auto;
+    }
+
+    .user-icon img {
+      width: 45px;
+    }
+
+    .input-box {
+      width: 100%;
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    .input-box input {
+      width: 100%;
+      padding: 12px 45px;
+      border: 2px solid #ccc;
+      border-radius: 25px;
+      font-size: 16px;
+      background: #fafafa;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .input-box input:focus {
+      border-color: #888;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .input-box img {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+    }
+
+    .show-pass-toggle {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 13px;
+      color: #555;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .extra-links {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .extra-links a {
+      text-decoration: none;
+      color: #555;
+      transition: 0.3s;
+    }
+
+    .extra-links a:hover {
+      color: #000;
+      text-decoration: underline;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 12px;
+      background: #5c5c5c;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .login-btn:hover {
+      background: #444;
+    }
+
+    .skip {
+      font-size: 14px;
+      color: gray;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+
+    .skip:hover {
+      color: black;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        width: 90%;
+        text-align: center;
+      }
+
+      .left-section {
+        padding: 20px;
+      }
+
+      .left-section img {
+        width: 80%;
+      }
+
+      .right-section {
+        padding: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Left Section (Logo) -->
+    <div class="left-section">
+      <img src="img/logo.png" alt="Tree House Logo" />
+    </div>
+
+    <!-- Right Section (Login Form) -->
+    <div class="right-section">
+      <div class="login-title">USER LOGIN</div>
+
+      <div class="user-icon">
+        <img src="img/User-1.png" alt="User Icon" />
+      </div>
+
+      <div class="input-box">
+        <img src="img/User.png" alt="User" />
+        <input type="text" id="username" placeholder="Username or Email" required />
+      </div>
+
+      <div class="input-box">
+        <img src="img/Lock.png" alt="Password" />
+        <input type="password" id="password" placeholder="Password" required />
+        <span class="show-pass-toggle" onclick="togglePassword()">Show</span>
+      </div>
+
+      <div class="extra-links">
+        <a href="signUp.html">Sign Up</a>
+        <a href="fogPass.html">Forgot Password?</a>
+      </div>
+
+      <button class="login-btn" id="loginBtn">LOGIN</button>
+      <a href="home.html"><div class="skip">Skip</div></a>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Toggle password visibility
+    function togglePassword() {
+      const passwordInput = document.getElementById("password");
+      const toggleText = document.querySelector(".show-pass-toggle");
+
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        toggleText.textContent = "Hide";
+      } else {
+        passwordInput.type = "password";
+        toggleText.textContent = "Show";
+      }
+    }
+
+    // Login validation
+    document.getElementById('loginBtn').addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const inputUsername = document.getElementById('username').value.trim();
+      const inputPassword = document.getElementById('password').value.trim();
+
+      const storedUser = JSON.parse(localStorage.getItem("treehouseUser"));
+
+      if (!storedUser) {
+        alert("No user found. Please sign up first.");
+        return;
+      }
+
+      const isMatch =
+        (inputUsername === storedUser.email || inputUsername === storedUser.name) &&
+        inputPassword === storedUser.password;
+
+      if (isMatch) {
+        alert("Login successful!");
+        window.location.href = "home.html";
+      } else {
+        alert("Invalid username or password.");
+      }
+    });
+  </script>
+
+</body>
+</html>
