@@ -1,198 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tree House - Signup</title>
-    <style>
-        /* Reset Default Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tree House - Signup</title>
+  <style>
+    /* Reset Default Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-        /* Full Page Background */
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(135deg, #E0E0E0, #F8F8F8); /* Subtle gray gradient */
-        }
+    /* Full Page Background */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #E0E0E0, #F8F8F8);
+    }
 
-        /* Main Container */
-        .container {
-            display: flex;
-            width: 900px;
-            background: white;
-            border-radius: 25px; /* More Curved */
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s ease;
-        }
+    /* Main Container */
+    .container {
+      display: flex;
+      width: 900px;
+      background: white;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
 
-        .container:hover {
-            transform: scale(1.01);
-        }
+    .container:hover {
+      transform: scale(1.01);
+    }
 
-        /* Left Section */
-        .left-section {
-            width: 50%;
-            background: #F3F3F3; /* Light Gray */
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border-top-left-radius: 25px;
-            border-bottom-left-radius: 25px;
-        }
+    /* Left Section */
+    .left-section {
+      width: 50%;
+      background: #F3F3F3;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 25px;
+    }
 
-        .illustration {
-            width: 100%;
-            border-radius: 20px; /* Rounded Image */
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
+    .illustration {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
 
-        /* Right Section (Form) */
-        .right-section {
-            width: 50%;
-            padding: 50px;
-            background: #FFFFFF;
-            border-top-right-radius: 25px;
-            border-bottom-right-radius: 25px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+    /* Right Section (Form) */
+    .right-section {
+      width: 50%;
+      padding: 50px;
+      background: #FFFFFF;
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-        h2 {
-            font-size: 26px;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 10px;
-        }
+    h2 {
+      font-size: 26px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 10px;
+    }
 
-        p {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 25px;
-        }
+    p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 25px;
+    }
 
-        /* Form Styling */
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
 
-        label {
-            font-weight: bold;
-            font-size: 14px;
-            align-self: flex-start;
-            color: #444;
-            margin-bottom: 5px;
-        }
+    label {
+      font-weight: bold;
+      font-size: 14px;
+      align-self: flex-start;
+      color: #444;
+      margin-bottom: 5px;
+    }
 
-        input {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: 2px solid #D1D1D1;
-            border-radius: 30px; /* More Rounded */
-            background-color: #F9F9F9;
-            font-size: 14px;
-            transition: 0.3s ease-in-out;
-        }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 2px solid #D1D1D1;
+      border-radius: 30px;
+      background-color: #F9F9F9;
+      font-size: 14px;
+      transition: 0.3s ease-in-out;
+    }
 
-        input:focus {
-            border-color: #999;
-            background: white;
-            outline: none;
-            box-shadow: 0 0 8px rgba(100, 100, 100, 0.2);
-        }
+    input:focus {
+      border-color: #999;
+      background: white;
+      outline: none;
+      box-shadow: 0 0 8px rgba(100, 100, 100, 0.2);
+    }
 
-        /* Buttons */
-        .btn {
-            width: 100%;
-            padding: 12px;
-            background: #B0B0B0; /* Soft Gray */
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 30px; /* More Rounded */
-            font-size: 16px;
-            font-weight: bold;
-            transition: 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            text-transform: uppercase;
-        }
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background: #B0B0B0;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-transform: uppercase;
+    }
 
-        .btn:hover {
-            background: #909090; /* Darker Gray */
-            transform: scale(1.02);
-        }
+    .btn:hover {
+      background: #909090;
+      transform: scale(1.02);
+    }
 
-        .secondary {
-            background: #D1D1D1;
-            color: #333;
-            margin-top: 10px;
-        }
+    .secondary {
+      background: #D1D1D1;
+      color: #333;
+      margin-top: 10px;
+    }
 
-        .secondary:hover {
-            background: #A1A1A1;
-        }
+    .secondary:hover {
+      background: #A1A1A1;
+    }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                width: 90%;
-            }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        width: 90%;
+      }
 
-            .left-section,
-            .right-section {
-                width: 100%;
-            }
+      .left-section,
+      .right-section {
+        width: 100%;
+      }
 
-            .right-section {
-                padding: 30px;
-            }
-        }
-    </style>
+      .right-section {
+        padding: 30px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Left Section -->
-        <div class="left-section">
-            <img src="img/pic2.jpg" alt="Illustration" class="illustration">
-        </div>
-
-        <!-- Right Section (Signup Form) -->
-        <div class="right-section">
-            <h2>Create an account</h2>
-            <p>Sign up now and unlock exclusive access!</p>
-            
-            <form>
-                <label for="name">Your Name</label>
-                <input type="text" id="name" placeholder="Enter your name" required>
-
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Enter your email" required>
-
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter your password" required>
-
-                <button type="submit" class="btn">Create Account</button>
-                <button type="button" class="btn secondary" onclick="window.location.href='login.html'">Sign in</button>
-            </form>
-        </div>
+  <div class="container">
+    <!-- Left Section -->
+    <div class="left-section">
+      <img src="img/pic2.jpg" alt="Illustration" class="illustration">
     </div>
+
+    <!-- Right Section (Signup Form) -->
+    <div class="right-section">
+      <h2>Create an account</h2>
+      <p>Sign up now and unlock exclusive access!</p>
+
+      <form id="signupForm">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+
+        <button type="submit" class="btn">Create Account</button>
+        <button type="button" class="btn secondary" onclick="window.location.href='login.html'">Sign in</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript for storing user data -->
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value;
+
+      if (name === "" || email === "" || password === "") {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      const userData = {
+        name: name,
+        email: email,
+        password: password
+      };
+
+      localStorage.setItem("treehouseUser", JSON.stringify(userData));
+
+      alert("Account created successfully! You can now log in.");
+      window.location.href = "login.html";
+    });
+  </script>
 
 </body>
 </html>
